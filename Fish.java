@@ -22,6 +22,8 @@ public class Fish extends Actor
         
         if(isTouching(Hero.class))
         {
+            GameOver gameOver = new GameOver();
+            getWorld().addObject(gameOver, 300,200);
             getWorld().removeObject(this);
         }
     }
