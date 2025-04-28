@@ -19,6 +19,11 @@ public class Fish extends Actor
         if(getX() <= 0) {
             resetFish();
         }
+        
+        if(isTouching(Hero.class))
+        {
+            getWorld().removeObject(this);
+        }
     }
     public void resetFish() {
         int num = Greenfoot.getRandomNumber(2);
